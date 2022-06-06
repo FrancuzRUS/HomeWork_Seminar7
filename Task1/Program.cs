@@ -27,18 +27,18 @@ void FillArray(int[,] array)
 Console.WriteLine("Введите количество строк в массиве: ");
 int a = int.Parse(Console.ReadLine());
 
-Console.WriteLine("Введите количество строк в массиве: ");
+Console.WriteLine("Введите количество столбцов в массиве: ");
 int b = int.Parse(Console.ReadLine());
 Console.WriteLine("------------------");
 
 int[,] MASS = new int[a, b];
 
-PrintArray(MASS);
+// PrintArray(MASS);
 FillArray(MASS);
 PrintArray(MASS);
 
 
-for (int j = 0; j < MASS.GetLength(0) - 1; j++)
+for (int j = 0; j < MASS.GetLength(1); j++)
 {
     int temp = MASS[0, j];
     MASS[0, j] = MASS[MASS.GetLength(0) - 1, j];
